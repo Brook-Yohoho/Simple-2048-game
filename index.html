@@ -4,24 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2048 Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
-        <h1>2048 Game</h1>
-    </div>
+    <div id="title">2048 Game</div>
     <div id="game-container">
-        <div id="game-board"></div>
+        <div id="board"></div>
+        <div id="game-info">
+            <div id="score">Score: <span id="score-value">0</span></div>
+            <button id="reset-btn">New Game</button>
+        </div>
     </div>
-    <div id="restart-container">
-        <button id="restart-btn">Restart Game</button>
-    </div>
-    <script src="game.js"></script>
-    <script>
-        // JavaScript for restarting the game
-        document.getElementById("restart-btn").addEventListener("click", function() {
-            restartGame();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,65 +1,60 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f9f6f2;
-    border-bottom: 2px solid #bbada0;
-}
-
-h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #776e65;
-}
-
-#restart-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #8f7a66;
-    color: #f9f6f2;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    outline: none;
-}
-
-#restart-btn:hover {
-    background-color: #a3937d;
+/* Add your CSS styles here */
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #game-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: calc(100vh - 80px); /* Adjusted to leave space for the header */
+    justify-content: center;
+    height: 100vh;
 }
 
-#game-board {
-    border: 5px solid #bbada0;
-    border-radius: 6px;
-    background-color: #bbada0;
-    width: 320px;
-    height: 320px;
+#board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(4, 80px); /* Reduced tile width */
+    gap: 5px; /* Reduced gap */
 }
 
 .tile {
-    width: 70px;
-    height: 70px;
-    background-color: #cdc1b4;
-    border-radius: 6px;
+    width: 80px; /* Reduced tile width */
+    height: 80px; /* Reduced tile height */
+    background-color: #ccc;
+    font-size: 18px; /* Smaller font size */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
+    border-radius: 8px; /* Slightly reduced border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#score {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reset-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+    background-color: #45a049;
 }
